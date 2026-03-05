@@ -11,3 +11,11 @@ booster_jobs/
 jobs/*
 
 wandb/*
+
+# Ignore inputs and outputs  frames
+input_frames
+input_frames_airplane
+output_frames
+output_plane
+output_vipseg_plane
+videos
