@@ -122,6 +122,9 @@ if __name__ == "__main__":
 				else:
 					predictions, visualized_output = demo.run_on_video(vid_frames, keep=True)
 			# do save
+			predictions, visualized_output = demo.run_on_video(vid_frames, keep=False)
+			print(f"DEBUG: visualized_output type={type(visualized_output)}, len={len(visualized_output) if visualized_output else 'None'}")
+			print(f"DEBUG: predictions keys={predictions.keys() if predictions else 'None'}")
 			for path, _vis_output in zip(_frames_path, visualized_output):
 				out_filename = os.path.join(output_root, os.path.basename(path))
 				_vis_output.save(out_filename)
